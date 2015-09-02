@@ -11,73 +11,32 @@ Author: Bob Toovey and James Mcavady
 Version: 0.1
 Author URI: http://buisness-gears.co.uk/
 */
-
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-add_action('admin_menu', 'jbplugins_admin_actions');
+//sidebar menu under add links
+add_action('admin_menu', 'jbplugins_admin_actions_add');
 
-function jbplugins_admin_actions() {
-	add_options_page('recipes', 'Add recipes', 'manage_options', __FILE__, 'recipes_admin');
+function jbplugins_admin_actions_add() {
+        add_menu_page('addrecipes', 'Add recipes', 'manage_options', 'jb-plugins-add.php', 'add_recipes_admin');
 }
 
-function recipes_admin() {
-?>
- <div class='addrecipe' style='float:left; text-align: center; width: 97.6%; background: rgb(255, 255, 255) none repeat scroll 0% 0%; margin-top: 20px;'>
-	<h2>Add your recipes</h2>
-	<p>add recipe form</p>
- </div>
- <div class='listrecipe' style='float:left; text-align: center; width: 97.6%; background: rgb(255, 255, 255) none repeat scroll 0% 0%; margin-top: 20px;'>
-	<h2>Your recipes</h2>
-	<p>A list of recipes</p>
-	<table class="widefat">
-		<thead>
-		  <thead>
-		  <tr>
-		  <th>Recipe ID</th>
-		  <th>Recipe Name</th>
-		  <th>Recipe Description</th>
-		  </tr>
-		</thead>
-
-		<tbody>
-
-		<?php
-			global $wpdb;
-
-			$recipe_table = $wpdb->prefix . 'recipe'; //Good practice
-			$recipes = $wpdb->get_results( "SELECT * FROM $recipe_table");
-		?>
-
-		<?php
-			foreach ($recipes as $recipe) {
-		?>
-
-		<tr>
-
-		<?php
-			echo "<td>".$recipe->id."</td>";
-			echo "<td>".$recipe->recipe_title."</td>";
-			echo "<td>".$recipe->description."</td>";
-		?>
-
-		</tr>
-		<?php
-		}
-		?>
-		</tbody>
-
-
-
-		<tfoot>
-		  <thead>
-		  <tr>
-		  <th>Recipe ID</th>
-		  <th>Recipe Name</th>
-		  </tr>
-		</tfoot>
-	<table>
- </div>
-
-<?php
+// add admin page template
+function add_recipes_admin() {
+	include_once('jb-plugins-add.php');
 }
+
+// *** //
+
+//sidebar menu under settings
+add_action('admin_menu', 'jbplugins_admin_actions_view');
+
+function jbplugins_admin_actions_view() {
+        add_menu_page('viewrecipes', 'view recipes', 'manage_options', 'jb-plugins-view.php', 'view_recipes_admin');
+}
+
+// view admin page template
+function view_recipes_admin() {
+	include_once('jb-plugins-view.php');
+}
+
 ?>
