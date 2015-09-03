@@ -7,11 +7,12 @@
 Plugin Name: jb-plugins
 Plugin URI: http://git.responsivedeveloper.com/bob/
 Description: jb-plugins
-Author: Bob Toovey and James Mcavady
+Author: Bob Toovey (Front End) and (Back End)James Mcavady
 Version: 0.1
 Author URI: http://buisness-gears.co.uk/
 */
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
 
 //sidebar menu under add links
 add_action('admin_menu', 'jbplugins_admin_actions_add');

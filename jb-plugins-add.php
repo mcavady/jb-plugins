@@ -7,15 +7,28 @@
 Plugin Name: jb-plugins
 Plugin URI: http://git.responsivedeveloper.com/bob/
 Description: jb-plugins
-Author: Bob Toovey and James Mcavady
+Author: James Mcavady
 Version: 0.1
-Author URI: http://buisness-gears.co.uk/
+Author URI: https://www.responsivedeveloper.com/
 */
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 ?>
-<!-- change inline styles to css file -->
- <div class='addrecipe' style='float:left; text-align: center; width: 97.6%; background: rgb(255, 255, 255) none repeat scroll 0% 0%; margin-top: 20px;'>
-	<h2>Add your recipes</h2>
-	<p>add recipe form</p>
- </div>
+<h2>Add your recipes</h2>
+<div class="postbox" >
+  <h3 class="hndle ui-sortable-hndle" >Just add your recipe using the boxes below and then click the add recipe button to save it.</h3>
+    <div class="inside">
+      <div class="misc-pub-section">
+        <form action="" method="_POST">
+          <input type="text" name="Recipe Name" id="RecipeName" value="Your recipe name" />
+        <br/>
+          <input type="text" name="Recipe Steps" id="RecipeSteps" value="Your recipe steps" />
+        <br/>
+          <input type="text" name="Recipe Ingrediants" id="RecipeIngrediants" value="Your recipe ingreditants" />
+        </form>
+      </div>
+    </div>
+    <div id="major-publishing-actions">
+      <input type="submit" name="submit" id="submit" class="button button-primary" value="Add Recipe"  />
+    </div>
+</div>
