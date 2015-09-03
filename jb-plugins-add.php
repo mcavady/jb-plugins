@@ -1,19 +1,3 @@
-<?php
-/**
- * @package jb-plugins
- * @version 1.6
- */
-/*
-Plugin Name: jb-plugins
-Plugin URI: http://git.responsivedeveloper.com/bob/
-Description: jb-plugins
-Author: James Mcavady
-Version: 0.1
-Author URI: https://www.responsivedeveloper.com/
-*/
-defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
-
-?>
 <h2>Add A Recipes</h2>
 <div class="wrap">
 <span>Just add your recipe using the boxes below and then click the add recipe button to save it.</span>

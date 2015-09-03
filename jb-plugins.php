@@ -74,7 +74,38 @@ function recipe_install() {
 }
 register_activation_hook( __FILE__, 'recipe_install' );
 
-//perhaps add some demo data into the DB?
+// ** add some demo data into the DB ** //
+
+function recipe_install_data() {
+	global $wpdb;
+
+	$recipe_name = 'Cherry Pie';
+	$recipe_description = 'A massive cherry pie';
+	$recipe_steps = "Step 1, step 2, step 3";
+	$table_name = $wpdb->prefix . 'recipes';
+
+	//check for data in the table
+        $recipe_table = $wpdb->prefix . 'recipes';
+        $hasData = $wpdb->get_results( "SELECT id FROM $recipe_table");
+
+	if ($hasData = '1') {
+		//do nothing
+	} else {
+		//insert dummy data
+		$wpdb->insert(
+		$table_name,
+			array(
+			  'time' => current_time( 'mysql' ),
+			  'recipe_name' => $recipe_name,
+			  'recipe_description' => $recipe_description,
+			  'recipe_steps' => $recipe_steps,
+			  'recipe_rfda' => $recipe_rfda,
+			)
+		);
+	}
+}
+
+register_activation_hook(__FILE__, 'recipe_install_data' );
 
 
 
