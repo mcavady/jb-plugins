@@ -11,7 +11,10 @@ Author: Bob Toovey (Front End) and (Back End)James Mcavady
 Version: 0.1
 Author URI: http://buisness-gears.co.uk/
 */
+
+//site wides
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+include_once('jb-plugins-shortcodes.php');
 
 
 //sidebar menu under add links
