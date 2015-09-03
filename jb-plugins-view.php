@@ -29,7 +29,7 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 	<tbody>
 	<?php
 		global $wpdb;
-		$recipe_table = $wpdb->prefix . 'recipe';
+		$recipe_table = $wpdb->prefix . 'recipes';
 		$recipes = $wpdb->get_results( "SELECT * FROM $recipe_table");
 	?>
 	<?php
@@ -38,8 +38,8 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 	<tr>
 	<?php
 		echo "<td>".$recipe->id."</td>";
-		echo "<td>".$recipe->recipe_title."</td>";
-		echo "<td>".$recipe->description."</td>";
+		echo "<td>".$recipe->recipe_name."</td>";
+		echo "<td>".$recipe->recipe_description."</td>";
 	?>
 	</tr>
 	<?php

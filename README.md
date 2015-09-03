@@ -1,4 +1,4 @@
-# jb-plugins - We do word press stuff
+# jb-plugins - We do wordpress stuff
 
 //** ! THIS WORDPRESS PLUGIN IS NOT READY FOR HUMAN CONSUMPTION ! **/
 
