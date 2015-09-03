@@ -1,0 +1,40 @@
+Valid JSON structure for storing information about a recipe. Information stored is based on
+RDFA requirements. Can be expanded to store supermarket product codes.
+
+Version: 0.1 / Bob Toovey / Thursday 3/9/2015
+
+Please note that before use, this header text need to be removed. JSON contains example data for testing
+
+
+{"recipe": {
+	"name":"Tonkatsu",
+	"author":"Manu's menu",
+	"image":"An URL of some kind",
+	"typeof":"Person",
+	"name":"Manu",
+	"datetime":"2015-9-01",
+	"datePublished":"November 5, 2009",
+	"description":"something or other",
+	"timing": {
+		"preptime":"30 min",
+		"cooktime":"1 hour",
+		"totaltime":"1 hour 30 min"},
+	"recipeyeild":"serves 4 people",
+	"recpieInstructions":"wave a magic wand and hope for the best",
+	"nutrition":{
+		"serving size":"1 per person",
+		"calories":"456 cal",
+		"fatcontent":"12g"},
+	"ingredients":[
+	{"item":"boneless pork chops (at least 1.25 cm – ½ inch thickness)","quantity":"1"},
+	{"item":"Egg","quantity":"1"},
+	{"item":"packet of panko","quantity":"1"},
+	{"item":"vegetable oil","quantity":"-"},
+	{"item":"Tonkatsu sauce","quantity":"-"},
+	{"item":"Salt and Pepper","quantity":"-"},
+	{"item":"tablespoond of oil","quantity":"1/2"},
+	{"item":"Flour","quantity":"-"}]
+	}
+}
+	
+
