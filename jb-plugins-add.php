@@ -14,9 +14,11 @@ Author URI: https://www.responsivedeveloper.com/
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 ?>
-<h2>Add your recipes</h2>
+<h2>Add A Recipes</h2>
+<div class="wrap">
+<span>Just add your recipe using the boxes below and then click the add recipe button to save it.</span>
+<hr/>
 <div class="postbox" >
-  <h3 class="hndle ui-sortable-hndle" >Just add your recipe using the boxes below and then click the add recipe button to save it.</h3>
     <div class="inside">
       <div class="misc-pub-section">
         <form action="" method="_POST">
@@ -31,4 +33,5 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
     <div id="major-publishing-actions">
       <input type="submit" name="submit" id="submit" class="button button-primary" value="Add Recipe"  />
     </div>
+</div>
 </div>

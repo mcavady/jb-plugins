@@ -15,6 +15,8 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 ?>
 <h2>Your recipes</h2>
+<div class="wrap">
+
   <table class="wp-list-table widefat fixed striped pages">
 	<thead>
 	  <thead>
@@ -53,3 +55,4 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 	  </tr>
 	</tfoot>
   <table>
+</div>
