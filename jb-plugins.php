@@ -64,6 +64,7 @@ function recipe_install() {
 		recipe_description text NOT NULL,
 		recipe_steps text NOT NULL,
 		recipe_rfda text NOT NULL,
+		recipe_shortcode text NOT NULL,
 		UNIQUE KEY id (id)
 	) $charset_collate;";
 
@@ -73,6 +74,7 @@ function recipe_install() {
 	add_option( 'recipe_db_version', $recipe_db_version );
 }
 register_activation_hook( __FILE__, 'recipe_install' );
+
 
 // ** add some demo data into the DB ** //
 
@@ -106,7 +108,6 @@ function recipe_install_data() {
 }
 
 register_activation_hook(__FILE__, 'recipe_install_data' );
-
 
 
 // ** deactivation **//
