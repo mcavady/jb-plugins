@@ -3,7 +3,7 @@
 
 // [bartag foo="foo-value"]    [recipetag theme="default" json="null"]
 function recipetag_func( $atts ) {
-    extract(shortcode_atts( array('theme' => 'default','json' => 'default',), $atts );
+    extract(shortcode_atts( array('theme' => 'default','json' => 'default'), $atts ));
     return "<div>theme:".$theme." / json:".$json."</div>";
 }
 add_shortcode( 'recipetag', 'recipetag_func' );
