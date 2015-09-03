@@ -51,18 +51,18 @@ $recipe_db_version = '1.0';
 
 function recipe_install() {
 	global $wpdb;
-	global $jal_db_version;
+	global $recipe_db_version;
 
 	$table_name = $wpdb->prefix . 'recipes';
-	
+
 	$charset_collate = $wpdb->get_charset_collate();
 
 	$sql = "CREATE TABLE $table_name (
 		id mediumint(9) NOT NULL AUTO_INCREMENT,
 		time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
-		name tinytext NOT NULL,
-		text text NOT NULL,
-		url varchar(55) DEFAULT '' NOT NULL,
+		recipe_name text NOT NULL,
+		recipe_description text NOT NULL,
+		recipe_steps text NOT NULL,
 		UNIQUE KEY id (id)
 	) $charset_collate;";
 
