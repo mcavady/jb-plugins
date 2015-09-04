@@ -3,7 +3,8 @@
 	if(isset($_POST['submit'])) {
 		echo "<script language='javascript'>alert('thanks!');</script> ";
 	} else {
-		echo "no Data";
+		echo "No Data";
+		echo $recipeName;
 	}
 	// ** form fields ** //
 	//RecipeName

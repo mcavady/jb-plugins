@@ -123,4 +123,37 @@ function jsplugins_uninstall() {
   // Uninstallation stuff here
 }
 register_uninstall_hook( __FILE__, 'jbplugins_uninstall' );
+
+
+// ** tinyMCE edits ** //
+
+add_action('admin_head', 'jbplugins_add_my_tc_button');
+
+function jbplugins_add_my_tc_button() {
+    global $typenow;
+
+//    if ( !current_user_can('edit_posts') &amp;&amp; !current_user_can('edit_pages') ) {
+//    return;
+//    }
+
+    if( ! in_array( $typenow, array( 'post', 'page' ) ) )
+        return;
+    if ( get_user_option('rich_editing') == 'true') {
+        add_filter("mce_external_plugins", "jbplugins_add_tinymce_plugin");
+        add_filter('mce_buttons', 'jbplugins_register_my_tc_button');
+    }
+}
+
+function jbplugins_add_tinymce_plugin($plugin_array) {
+    $plugin_array['jbplugins_tc_button'] = plugins_url( 'js/recipe-button.js', __FILE__ ); // CHANGE THE BUTTON SCRIPT HERE
+    return $plugin_array;
+}
+
+function jbplugins_register_my_tc_button($buttons) {
+   array_push($buttons, "jbplugins_tc_button");
+   return $buttons;
+}
+
+
+
 ?>
