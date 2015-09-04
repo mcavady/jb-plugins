@@ -1,17 +1,19 @@
 <?php
+/***********************/
+/*@author James Mcavady*/
+/***********************/
+
+
 	// code for inserting recipe to the database
 	if(isset($_POST['submit'])) {
 		echo "<script language='javascript'>alert('thanks!');</script> ";
 	} else {
 		echo "No Data";
-		echo $recipeName;
 	}
 	// ** form fields ** //
 	//RecipeName
 	//RecipeSteps
 	//RecipeIngrediants
-
-
 
 	//get the input from the add recipe page
 	//generate the JSON

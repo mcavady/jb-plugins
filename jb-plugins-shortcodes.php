@@ -1,4 +1,9 @@
 <?php
+//***********************/
+//*@author James Mcavady*/
+//***********************/
+
+
 //rework this example to get the relivant html json code from the DB and output it correctly for each recipe post.
 
 // [bartag foo="foo-value"]    [recipetag theme="default" json="null"]

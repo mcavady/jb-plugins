@@ -12,6 +12,11 @@ Version: 0.1
 Author URI: http://buisness-gears.co.uk/
 */
 
+//***********************/
+//*@author James Mcavady*/
+//***********************/
+
+
 // ** site wides define and includes** //
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 include_once('jb-plugins-shortcodes.php');
@@ -125,7 +130,9 @@ function jsplugins_uninstall() {
 register_uninstall_hook( __FILE__, 'jbplugins_uninstall' );
 
 
+//*********************//
 // ** tinyMCE edits ** //
+//*********************//
 
 add_action('admin_head', 'jbplugins_add_my_tc_button');
 
@@ -153,7 +160,4 @@ function jbplugins_register_my_tc_button($buttons) {
    array_push($buttons, "jbplugins_tc_button");
    return $buttons;
 }
-
-
-
 ?>
