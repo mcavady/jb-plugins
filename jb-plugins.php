@@ -19,36 +19,39 @@ Author URI: http://buisness-gears.co.uk/
 // ** site wides define and includes** //
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-include_once('jb-plugins-recipe-popup.php');
-
 include_once('jb-plugins-shortcodes.php');
 
+// ** add the recipe popup into admin header ** //
+add_action('in_admin_header', 'jbplugins_admin_recipe_popup' );
+function jbplugins_admin_recipe_popup() {
+	include_once('jb-plugins-recipe-popup.php');
+}
 
 // ** add sidebar menu ** //
-add_action('admin_menu', 'jbplugins_admin_actions_add');
+//add_action('admin_menu', 'jbplugins_admin_actions_add');
 
-function jbplugins_admin_actions_add() {
-        add_menu_page('addrecipes', 'Add recipes', 'manage_options', 'jb-plugins-add.php', 'add_recipes_admin');
-}
+//function jbplugins_admin_actions_add() {
+//        add_menu_page('addrecipes', 'Add recipes', 'manage_options', 'jb-plugins-add.php', 'add_recipes_admin');
+//}
 
 
 // ** add admin page template ** //
-function add_recipes_admin() {
-	include_once('jb-plugins-add.php');
-}
+//function add_recipes_admin() {
+//	include_once('jb-plugins-add.php');
+//}
 
 
 // ** sidebar menu under settings ** //
-add_action('admin_menu', 'jbplugins_admin_actions_view');
+//add_action('admin_menu', 'jbplugins_admin_actions_view');
 
-function jbplugins_admin_actions_view() {
-        add_menu_page('viewrecipes', 'view recipes', 'manage_options', 'jb-plugins-view.php', 'view_recipes_admin');
-}
+//function jbplugins_admin_actions_view() {
+//        add_menu_page('viewrecipes', 'view recipes', 'manage_options', 'jb-plugins-view.php', 'view_recipes_admin');
+//}
 
 // ** view admin page template ** //
-function view_recipes_admin() {
-	include_once('jb-plugins-view.php');
-}
+//function view_recipes_admin() {
+//	include_once('jb-plugins-view.php');
+//}
 
 
 // ** add the database table on active plugin ** //
@@ -162,4 +165,6 @@ function jbplugins_register_my_tc_button($buttons) {
    array_push($buttons, "jbplugins_tc_button");
    return $buttons;
 }
+
+
 ?>

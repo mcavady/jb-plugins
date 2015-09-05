@@ -1,0 +1,5 @@
+/*admin panel css*/
+#messagepop {display:none;position:fixed;top:0px;z-index:1119;width:98%;}
+.popup-inner {float:left;background:#ddd;height:470px;width:100%;}
+.popup-inner form {}
+.popup-inner input {}
