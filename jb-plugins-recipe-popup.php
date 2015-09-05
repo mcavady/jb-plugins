@@ -9,13 +9,13 @@
 		<br />
 		<form>
 			<br />
-			Recipe Name<input type="textbox" name="recipename">
+			<div class="fieldholder"><p>Recipe Name</p><input type="textbox" name="recipename"></div>
 			<br />
-			Recipe Description<input type="textbox" name="recipedescription">
+			<div class="fieldholder"><p>Recipe Description</p><input type="textbox" name="recipedescription"></div>
 			<br />
-			Recipe Steps<input type="textbox" name="recipesteps">
+			<div class="fieldholder"><p>Recipe Steps</p><input type="textbox" name="recipesteps"></div>
 			<br />
-			<input action="" type="submit" name="addrecipe">
+			<input class="submitbutton" action="" type="submit" name="addrecipe">
 		</form>
 	</div>
 </div>

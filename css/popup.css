@@ -1,5 +1,8 @@
 /*admin panel css*/
-#messagepop {display:none;position:fixed;top:0px;z-index:1119;width:98%;}
+#messagepop {/*display:none;*/position:fixed;top:0px;z-index:1119;width:98%;}
 .popup-inner {float:left;background:#ddd;height:470px;width:100%;}
-.popup-inner form {}
-.popup-inner input {}
+.popup-inner form {float:left;width:50%;}
+.popup-inner input {float:left;width:50%;margin-top:5px;}
+.popup-inner p {float:left;width:25%;margin-right:10px;}
+.popup-inner form .fieldholder {float:left;clear:both;width:100%;}
+.popup-inner .submitbutton {float:left;width:100%;}
