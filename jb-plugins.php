@@ -16,9 +16,11 @@ Author URI: http://buisness-gears.co.uk/
 //*@author James Mcavady*/
 //***********************/
 
-
 // ** site wides define and includes** //
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
+include_once('jb-plugins-recipe-popup.php');
+
 include_once('jb-plugins-shortcodes.php');
 
 

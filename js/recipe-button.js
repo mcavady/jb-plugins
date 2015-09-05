@@ -11,13 +11,15 @@
             icon: false,
             onclick: function() {
                 
-		alert("hello");
+		/*alert("hello");*/
 
-		/* Popup for recipe input */
-
+		/* Popup for recipe input -- needs a whole lot of work */
+		document.getElementById('messagepop').style.display ="inline";
+		
 		/*editor.insertContent('Hello World!');*/
 		
             }
         });
     });
+
 })();
