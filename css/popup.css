@@ -1,8 +1,12 @@
-/*admin panel css*/
-#messagepop {/*display:none;*/position:fixed;top:0px;z-index:1119;width:98%;}
-.popup-inner {float:left;background:#ddd;height:470px;width:100%;}
-.popup-inner form {float:left;width:50%;}
-.popup-inner input {float:left;width:50%;margin-top:5px;}
-.popup-inner p {float:left;width:25%;margin-right:10px;}
+/**********************/
+/*Author James Mcavady*/
+/**********************/
+
+/*admin panel popup css*/
+#messagepop {display:none;position:fixed;top:0px;z-index:1119;width:93%;}
+.popup-inner {float:left;background:#ddd;width:88%;padding-bottom:10px;}
+.popup-inner form {float:left;width:99.6%;}
 .popup-inner form .fieldholder {float:left;clear:both;width:100%;}
-.popup-inner .submitbutton {float:left;width:100%;}
+.popup-inner input {float:left;width:50%;margin-top:5px;}
+.popup-inner p {float:left;width:25%;margin-right:10px;margin-left:10px;}
+.popup-inner .submitbutton {width:25%;float:right;}

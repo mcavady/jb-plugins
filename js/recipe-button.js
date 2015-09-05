@@ -10,12 +10,11 @@
             text: 'Add Reciepe',
             icon: false,
             onclick: function() {
-                
-		/*alert("hello");*/
 
 		/* Popup for recipe input -- needs a whole lot of work */
-		document.getElementById('messagepop').style.display ="inline";
 		
+		document.getElementById('messagepop').style.display ="inline";
+
 		/*editor.insertContent('Hello World!');*/
 		
             }
